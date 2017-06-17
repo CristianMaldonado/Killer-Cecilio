@@ -10,10 +10,12 @@ void Chasis::inicializar(int ena, int enb, int in1, int in2, int in3, int in4, i
 }
 void Chasis::avanzar(){
   this->demorar(&PuenteH::avanzar);
+  estado = ESTOY_AVANZADO;
 }
 
 void Chasis::retroceder(){
   this->demorar(&PuenteH::retroceder);
+  estado = ESTOY_RETROCEDIENDO;
 }
 void Chasis::frenar(){
   this->demorar(&PuenteH::frenar);

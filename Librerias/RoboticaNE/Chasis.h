@@ -3,6 +3,8 @@
 #include "PuenteH.h"
 #include <Arduino.h>
 
+enum ESTADO {ESTOY_AVANZANDO, ESTOY_RETROCEDIENDO};
+
 class Chasis
 {
 public:
@@ -15,6 +17,7 @@ public:
   void rotarIzquierda();
   void rotarDerecha();
   void editarVelocidad(int porcentajeVelocidad);
+  ESTADO estado;//no se donde carajo va
 protected:
   PuenteH puenteH;
   int porcentajeVelocidad;
